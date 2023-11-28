@@ -1,0 +1,35 @@
+<html>
+    <form action="/update"method="POST">
+        {% csrf_token %}
+        <table>
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Mobile number</th>
+                <th>E-mail</th>
+            </thead>
+            <tbody>
+                {% for is in data %}
+                <tr>
+                    <td>
+                        <input type="text"name="idno"value="{{is.id}}"hidden>
+                        <input type="text"name="fname"value="{{is.fn}}">
+                    </td>
+                    <td>
+                        <input type="text"name="lname"value="{{is.lm}}"> 
+                    </td>
+                    <td>
+                        <input type="number"name="number"value="{{is.mb}}"> 
+                    </td>
+                    <td>
+                        <input type="email"name="email"value="{{is.em}}"> 
+                    </td>
+                    <td>
+                        <button type="submit">Update</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </form>
+</html>

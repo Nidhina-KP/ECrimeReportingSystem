@@ -1,0 +1,95 @@
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<head>
+  <style>
+      * {
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+float: left;
+width: 25%;
+padding: 10px; 
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Style the counter cards */
+.card {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+padding: 16px;
+text-align: center;
+background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+.column {
+  width: 100%;
+  display: block;
+  margin-bottom: 200px;
+}
+}
+  </style>
+  <div class="card text-center">
+    <div class="card-header">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link " href="user_card">Complaint</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mview">Missing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="compview">Crime</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="home">Back</a>
+            
+        </li>
+      </ul>
+    </div>
+  </head>
+  <body>
+  <form action="compview"method="post">
+    {% for user in view %}
+    <div class="column">
+      <img src="{{user.q7.url}}">
+      <h3>{{ user.q2 }}</h3>
+      <div class="card">
+        <p><strong>Reported by:</strong> {{ user.q5}}</p>
+      <p><strong>Location of incident:</strong> {{ user.loc }}</p>
+      <p><strong>Type of Bullying:</strong> {{ user.bt }}</p>
+      <p><strong>Type of behavior:</strong> {{ user.bb }}</p>
+      <p><strong>Describe the incident:</strong> {{ user.des }}</p>
+      <p><strong>Complaint:</strong> {{ user.q8 }}</p>
+      <button type="button" class="btn btn-link" data-mdb-ripple-color="dark" onclick="window.location.href = 'status2';">Show status </button>
+      </div>
+      </div>
+      {% endfor %}
+  </form>
+</body>

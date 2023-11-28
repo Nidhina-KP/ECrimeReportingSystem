@@ -1,0 +1,53 @@
+<style>
+    .badge{
+      background-color: darkgreen;
+      color:aliceblue;
+  
+    }
+    .badge1{
+      background-color: yellow;
+      color:black;
+    }
+  </style>
+  <!--Table-->
+  
+  <table border="2px solid" style="width: 100%;background-color: whitesmoke " class="table table-striped w-auto"">
+      <!--Table head-->
+      <thead style="background-color:peru; ">
+        <tr>
+          <th>#</th>
+          <th>Missing person </th>
+          <th>Name</th>
+          <th>Alias</th>
+          <th>Relative Name</th>
+          <th>Relation type</th>
+          <th>Age</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <!--Table head-->
+    
+      <!--Table body-->
+      <tbody>
+          {% for user in view %}
+        <tr class="table-info">
+          <th scope="row">{{user.id}}</th>
+          <td><img src="{{user.img.url}}"></td>
+          <td>{{ user.fname }}</td>
+          <td>{{ user.alias }}</td>
+          <td>{{ user.relnm }}</td>
+          <td>{{ user.rlty }}</td>
+          <td>{{ user.age }}</td>
+          {% if user.m_status %}
+          <td><small class="badge">on Progress</small></td>
+          {% else %}
+          <td><small class="badge1">on Pending</small></td>
+          {% endif %}
+        </tr>
+        {% endfor %}
+      </tbody>
+      <!--Table body-->
+    
+    
+    </table>
+    <!--Table-->

@@ -1,0 +1,16 @@
+{% load static %}
+{% extends 'home.html' %}
+
+{% block content %}
+  <h2>Update Complaint Status</h2>
+  <form method="post"action="">
+    {% csrf_token %}
+    <label>Status:</label>
+    <select name="status">
+      <option value="Pending">Pending</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Resolved">Resolved</option>
+    </select>
+    <button type="submit">Update</button>
+  </form>
+{% endblock %}

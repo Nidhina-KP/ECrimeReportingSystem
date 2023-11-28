@@ -1,0 +1,81 @@
+<style>
+    caption {
+        font-size: 1.8rem;
+    }
+    table {
+        width: 100%;
+        font-size: 1.2rem;
+        margin: 20px auto;
+    }
+     
+    tbody tr:nth-child(odd) {
+        background: #202932;
+    }
+     
+    tbody tr:nth-child(even) {
+        background: #2c3844;
+    }
+     
+    tbody {
+        color: white;
+    }
+     
+    table, td, th {
+        border-collapse: collapse;
+    }
+     
+    th, td {
+        padding: 10px;
+        border: 1px solid #777;
+        text-align: center;
+    }
+     
+    .firstRowFirstColumn {
+        width: 400px;
+    }
+    
+    </style>
+    <html>
+        <center>
+        <h1>User Updates</h1>
+        <form action="/userupde" method="POST">
+            {% csrf_token %}
+            <table border="2px solid">
+                <thead>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Mobile number</th>
+                    <th>E-mail</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </thead>
+                <body>
+                    
+                    {% for is in data %}
+                    <tr>
+                        <td>{{is.fn}}</td>
+                        <td>{{is.lm}}</td>
+                        <td>{{is.mb}}</td>
+                        <td>{{is.em}}</td>
+                        <td>
+                            <button><a href="/edit?idn={{is.id}}">Edit</a></button>
+                        </td>
+                        <td>
+                            <button><a href="/delete?idn={{is.id}}">Delete</a></button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </body>
+            </table>
+            <div class="card text-center">
+                <div class="card-header">
+                  <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link " href="home">BACK</a>
+                    </li>
+                  </ul>
+                </div>
+            </div>        
+        </form>
+        </center>
+    </html>

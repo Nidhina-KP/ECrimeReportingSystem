@@ -1,0 +1,312 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>E-crime</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Start -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bg-secondary d-none d-lg-block">
+                <a href="index" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <h1 class="m-0 display-4 text-primary text-uppercase">E-crime</h1>
+                </a>
+            </div>
+            <div class="col-lg-9">
+                <div class="row bg-white border-bottom d-none d-lg-flex">
+                    <div class="col-lg-7 text-left">
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-3">
+                            <i class="fa fa-envelope text-primary mr-2"></i>
+                            <small>info@example.com</small>
+                        </div>
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                            <i class="fa fa-phone-alt text-primary mr-2"></i>
+                            <small>+012 345 6789</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-right">
+                        <div class="d-inline-flex align-items-center p-2">
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+                    <a href="index" class="navbar-brand d-block d-lg-none">
+                        <h1 class="m-0 display-4 text-primary text-uppercase">E-crime</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="index" class="nav-item nav-link ">Home</a>
+                            <a href="reg" class="nav-item nav-link">Registration</a>
+                            <a href="log" class="nav-item nav-link">Login</a>
+                            <a href="gallery" class="nav-item nav-link">Gallery</a>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <a href="case" class="btn btn-primary mr-3 d-none d-lg-block">Cases</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <div class="bg" style="background-color:rgb(180, 145, 99);align-content: center;color: black;">
+        <h1>CRIME AGAINST WOMEN</h1>
+        <a href="case" style="color: black;">Total Crime Cases</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="childcase" style="color: black;"> Crime Against Children</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="wcase" style="color: black;">Crime Against Women</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="mcase" style="color: black;">Missing Cases</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="rcase" style="color: black;">Road Accidents</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <div>
+        <img src="{% static 'graph3.png' %}" class="img-fluid" >
+    </div>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">SI.No</th>
+            <th scope="col">Crime Head</th>
+            <th scope="col">2016</th>
+            <th scope="col">2017</th>
+            <th scope="col">2018</th>
+            <th scope="col">2019</th>
+            <th scope="col">2020</th>
+            <th scope="col">2021</th>
+            <th scope="col">2022 (provisional)</th>
+            <th scope="col">2023 (upto January)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Rape</td>
+            <td>1656</td>
+            <td>2003</td>
+            <td>2005</td>
+            <td>2023</td>
+            <td>1880</td>
+            <td>2339</td>
+            <td>2503</td>
+            <td>223</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Molestation</td>
+            <td>4029</td>
+            <td>4413</td>
+            <td>4544</td>
+            <td>4507</td>
+            <td>3890</td>
+            <td>4059</td>
+            <td>5354</td>
+            <td>529</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Kidnapping and Abduction</td>
+            <td>157</td>
+            <td>184</td>
+            <td>205</td>
+            <td>280</td>
+            <td>200</td>
+            <td>257</td>
+            <td>269</td>
+            <td>26</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Eve teasing</td>
+            <td>328</td>
+            <td>421</td>
+            <td>461</td>
+            <td>435</td>
+            <td>442</td>
+            <td>504</td>
+            <td>584</td>
+            <td>46</td>
+          </tr>
+          
+          <tr>
+            <th scope="row">5</th>
+            <td>Dowry death (304(B) IPC)e</td>
+            <td>25</td>
+            <td>12</td>
+            <td>17</td>
+            <td>8</td>
+            <td>6</td>
+            <td>9</td>
+            <td>8</td>
+            <td>0</td>
+          </tr>
+          
+          <tr>
+            <th scope="row">6</th>
+            <td>Cruelty by husband / relatives</td>
+            <td>3455</td>
+            <td>2856</td>
+            <td>2046</td>
+            <td>2970</td>
+            <td>2707</td>
+            <td>5019</td>
+            <td>5997</td>
+            <td>406</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+        <div class="row mt-5">
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                    <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
+                    <div class="ml-3">
+                        <h5 class="text-white">Our Office</h5>
+                        <p class="m-0">123 Street, New York, USA</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                    <i class="fa fa-2x fa-envelope-open text-primary"></i>
+                    <div class="ml-3">
+                        <h5 class="text-white">Email Us</h5>
+                        <p class="m-0">info@example.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                    <i class="fa fa-2x fa-phone-alt text-primary"></i>
+                    <div class="ml-3">
+                        <h5 class="text-white">Call Us</h5>
+                        <p class="m-0">+012 345 6789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">E-Crime</h1>
+                </a>
+                <p>E-Crime is about filling an online complaint against any crime in case of victim or witnesses by the user.. The system provides easiest and fastest way to register    for a complaint and a crime or registering for missing complaint.</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Popular Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Attorney</a>
+                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>FAQs</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Help</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy</a>
+                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Site Map</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Newsletter</h4>
+                <p>Check out for the latest news...</p>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-0" style="padding: 25px;" placeholder="Your Email">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-4">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
+            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">HTML Codex</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

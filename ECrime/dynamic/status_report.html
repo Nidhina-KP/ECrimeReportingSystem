@@ -1,0 +1,57 @@
+<style>
+    .badge{
+      background-color: darkgreen;
+      color:aliceblue;
+  
+    }
+    .badge1{
+      background-color: yellow;
+      color:black;
+    }
+  </style>
+  <!--Table-->
+  
+  <table border="2px solid" style="width: 100%;background-color: whitesmoke " class="table table-striped w-auto"">
+      <!--Table head-->
+      <thead style="background-color:peru; ">>
+        <tr>
+          <th>#</th>
+          <th>Crime place</th>
+          <th>Name</th>
+          <th>Reported by</th>
+          <th>Location of incident</th>
+          <th>Type of Bullying</th>
+          <th>Type of behavior</th>
+          <th>Describe the incident</th>
+          <th>Complaint</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <!--Table head-->
+    
+      <!--Table body-->
+      <tbody>
+          {% for user in view %}
+        <tr class="table-info">
+          <th scope="row">{{user.id}}</th>
+          <td><img src="{{user.q7.url}}"></td>
+          <td>{{ user.q2 }}</td>
+          <td>{{ user.q5}}</td>
+          <td>{{ user.loc }}</td>
+          <td>{{ user.bt }}</td>
+          <td>{{ user.bb }}</td>
+          <td>{{ user.des }}</td>
+          <td>{{ user.q8 }}</td>
+          {% if user.r_status %}
+          <td><small class="badge">on Progress</small></td>
+          {% else %}
+          <td><small class="badge1">on Pending</small></td>
+          {% endif %}
+        </tr>
+        {% endfor %}
+      </tbody>
+      <!--Table body-->
+    
+    
+    </table>
+    <!--Table-->

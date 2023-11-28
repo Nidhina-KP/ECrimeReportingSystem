@@ -1,0 +1,53 @@
+<style>
+  .badge{
+    background-color: darkgreen;
+    color:aliceblue;
+
+  }
+  .badge1{
+    background-color: yellow;
+    color:black;
+  }
+</style>
+<!--Table-->
+
+<table border="2px solid" style="width: 100%;background-color: whitesmoke " class="table table-striped w-auto"">
+    <!--Table head-->
+    <thead style="background-color:peru; ">>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Date and time of incidence</th>
+        <th>Date and time of registration</th>
+        <th>complaint</th>
+        <th>Complaint type</th>
+        <th>Status</th>z
+      </tr>
+    </thead>
+    <!--Table head-->
+  
+    <!--Table body-->
+    <tbody>
+        {% for user in view %}
+      <tr class="table-info">
+        <th scope="row">{{user.id}}</th>
+        <td>{{ user.name }}</td>
+        <td>{{ user.age }}</td>
+        <td>{{ user.date }}</td>
+        <td>{{ user.regdt }}</td>
+        <td>{{ user.comp}}</td>
+        <td>{{ user.comptyp }}</td>
+        {% if user.status %}
+        <td><small class="badge">on Progress</small></td>
+        {% else %}
+        <td><small class="badge1">on Pending</small></td>
+        {% endif %}
+      </tr>
+      {% endfor %}
+    </tbody>
+    <!--Table body-->
+  
+  
+  </table>
+  <!--Table-->

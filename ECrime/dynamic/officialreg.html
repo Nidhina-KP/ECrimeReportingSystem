@@ -1,0 +1,341 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="{% static 'style.css' %}" rel="stylesheet">
+    <link href="{% static 'off.css' %}" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>E-crime</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+   <style>
+    select {
+  width: 100%;
+  padding: 0.5em 1em;
+  background: transparent;
+  border-radius: 1em;
+  color: inherit;
+  font: inherit;
+}
+   </style>
+</head>
+
+<body>
+    <!-- Header Start -->
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bg-secondary d-none d-lg-block">
+                <a href="" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <h1 class="m-0 display-4 text-primary text-uppercase">E-crime</h1>
+                </a>
+            </div>
+            <div class="col-lg-9">
+                <div class="row bg-white border-bottom d-none d-lg-flex">
+                    <div class="col-lg-7 text-left">
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-3">
+                            <i class="fa fa-envelope text-primary mr-2"></i>
+                            <small>info@example.com</small>
+                        </div>
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                            <i class="fa fa-phone-alt text-primary mr-2"></i>
+                            <small>+012 345 6789</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-right">
+                        <div class="d-inline-flex align-items-center p-2">
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+                    <a href="index" class="navbar-brand d-block d-lg-none">
+                        <h1 class="m-0 display-4 text-primary text-uppercase">Justice</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="/home" class="nav-item nav-link ">Home</a>
+                             <a href="official" class="nav-item nav-link">Registration</a>
+                             <a href="officiallog" class="nav-item nav-link">Login</a>  
+                            <a href="/gallery" class="nav-item nav-link">Gallery</a>
+                            <!-- <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reporting</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="crime" class="dropdown-item">Report Complaint</a>
+                                    <a href="missing" class="dropdown-item">Report missing</a>
+                                    <a href="report" class="dropdown-item">Report Crime</a>
+                                </div>
+                            </div>-->
+                            
+                        </div> 
+                        <a href="case.html" class="btn btn-primary mr-3 d-none d-lg-block">Cases</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div> 
+    <!-- Header End -->
+    {% if error_message %}
+  <p class="error">{{ error_message }}</p>
+  {% endif %}
+    <form action="officiallog"method="post" onsubmit="return officelog()">
+      {% csrf_token %}
+       
+      <div class ="row">
+        <div class="col-md-6 mx-auto p-0">
+          <div class="card">
+      <div class="login-box">
+        <div class="login-snip">
+          <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
+          <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+          <div class="login-space">
+            <div class="login">
+              <div class="group">
+                <label for="user" class="label">Username</label>
+                <input id="user" type="text" class="input" name="username" placeholder="Enter your username" required>
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Password</label>
+                <input id="pass" type="password" class="input" name="password" data-type="password" placeholder="Enter your password" required>
+              </div>
+              <div class="group">
+                <input id="check" type="checkbox" class="check" checked>
+                <label for="check"><span class="icon"></span> Keep me Signed in</label>
+              </div>
+              <div class="group">
+                <input type="submit" class="button" value="Sign In">
+              </div>
+              <div class="hr"></div>
+              <div class="foot">
+                <a href="#">Forgot Password?</a>
+              </div>
+            </div>
+          </form>
+          <form action="official"method="post" onsubmit="return office()">
+            {% csrf_token %}
+             
+            <div class="sign-up-form">
+              <div class="group">
+                <label for="user" class="label">Username</label>
+                <input id="user" type="text" class="input" placeholder="Create your Username" name="un" id="a1" required>
+              </div>
+              
+              <div class="group">
+                <label for="pass" class="label">Email Address</label>
+                <input id="pass" type="text" class="input" placeholder="Enter your email address" name="em" id="a2" required>
+              </div>
+              <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+              <label for="signup-email" id="a3" style="color: #bab0b0;">Designation</label> -->
+              <!-- <div class="box">
+                <select class="selectpicker" data-size="4" name="des">
+                  <option selected">Choose your Designation</option>
+                  <option value="1">Judge</option>
+                  <option value="2">Police Officer</option>
+                  <option value="3">Advocate</option>
+                  <option value="1">Socialist</option>						
+                </select></div> -->
+              
+              <div class="group">
+                <label for="pass" class="label">Official ID</label>
+                <input id="pass" type="text" class="input" placeholder="Enter your Official Id Number" name="oid" id="a4" required>
+              </div>
+            
+              <div class="group">
+                <label for="pass" class="label">Password</label>
+                <input id="pass" type="password" class="input" data-type="password" placeholder="Create your password" name="psw" id="a6" required>
+              </div>
+              <div class="group">
+                <label for="pass" class="label">Repeat Password</label>
+                <input id="pass" type="password" class="input" data-type="password" placeholder="Repeat your password" name="cpsw" id="a7" required >
+              </div>
+              <div class="group">
+                <input type="submit" class="button" value="Sign Up">
+              </div>
+              <!-- <div class="hr"></div>
+              <div class="foot">
+                <label for="tab-1">Already Member?</label>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>   
+      </div>
+      </div>
+      </div>
+    </form>
+    <script>
+    function office(){
+        var name=document.getElementById("a1").value;
+        var email=document.getElementById("a2").value;
+        var id=document.getElementById("a4").value
+        var pass=document.getElementById("a6").value;
+        var cpass=document.getElementById("a7").value;
+
+        const regnme =/^[A-Z a-z .-_  ]+$/;
+        const regid =/^[A-Z a-z 0-9]+$/;
+        const regeml=/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
+
+        if(!regnme.test(name)){
+            alert("Only alphabets allowed!..........");
+            return false;
+        }
+       
+        if(!regeml.test(email)){
+            alert("Enter a valid email id................");
+            return false;
+        }
+        if(!regid.test(id)){
+            alert("Enter Valid Data.............");
+            return false;
+        }
+        
+        
+
+        if(pass!=cpass){
+            alert("password didn't match");
+            return false;
+        }
+    } 
+    </script>   
+    <script>
+      function officelog()
+      {
+        var username = document.getElementById("name").value;
+        var password = document.getElementById("psw").value;
+        
+        const regunm =/^[A-Z a-z .-_ ]+$/;
+        if(!regunm.test(name)){
+          alert("Enter a valid username!......");
+          return false;
+        }
+      }
+      </script> 
+      
+    </body>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+      <div class="row mt-5">
+          <div class="col-lg-4">
+              <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                  <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
+                  <div class="ml-3">
+                      <h5 class="text-white">Our Office</h5>
+                      <p class="m-0">123 Street, New York, USA</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4">
+              <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                  <i class="fa fa-2x fa-envelope-open text-primary"></i>
+                  <div class="ml-3">
+                      <h5 class="text-white">Email Us</h5>
+                      <p class="m-0">info@example.com</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4">
+              <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                  <i class="fa fa-2x fa-phone-alt text-primary"></i>
+                  <div class="ml-3">
+                      <h5 class="text-white">Call Us</h5>
+                      <p class="m-0">+012 345 6789</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row pt-5">
+          <div class="col-lg-3 col-md-6 mb-5">
+              <a href="index.html" class="navbar-brand">
+                  <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">Justice</h1>
+              </a>
+              <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
+              <div class="d-flex justify-content-start mt-4">
+                  <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                  <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5">
+              <h4 class="font-weight-semi-bold text-primary mb-4">Popular Links</h4>
+              <div class="d-flex flex-column justify-content-start">
+                  <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                  <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
+                  <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                  <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Attorney</a>
+                  <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5">
+              <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
+              <div class="d-flex flex-column justify-content-start">
+                  <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>FAQs</a>
+                  <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Help</a>
+                  <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms</a>
+                  <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy</a>
+                  <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Site Map</a>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5">
+              <h4 class="font-weight-semi-bold text-primary mb-4">Newsletter</h4>
+              <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum.</p>
+              <div class="w-100">
+                  <div class="input-group">
+                      <input type="text" class="form-control border-0" style="padding: 25px;" placeholder="Your Email">
+                      <div class="input-group-append">
+                          <button class="btn btn-primary px-4">Sign Up</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
+          <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+              <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-right">
+              <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">HTML Codex</a></p>
+          </div>
+      </div>
+  </div>
+  <!-- Footer End -->
+    </html>   

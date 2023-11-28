@@ -1,0 +1,327 @@
+{% load static %}
+<html lang="en">
+ <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link href="{% static 'style.css' %}" rel="stylesheet">
+
+     <!-- Required meta tags -->
+     <meta charset="utf-8"
+         <meta name="viewport" content=
+             "width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+     <!-- Bootstrap CSS -->
+     <link href=
+     "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity=
+     "sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous">
+    
+    <title>Register your complaint</title>
+    <style type="text/css">
+        .registerform{
+            margin-top: 5%;
+            width:50vw;
+            max-width: 90vw;
+        }
+        .form-group{
+            margin: 2vw;
+        }       
+    </style>
+  </head>
+  <body>
+    <!-- Header Start -->
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-3 bg-secondary d-none d-lg-block">
+              <a href="index" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                  <h1 class="m-0 display-4 text-primary text-uppercase">E-crime</h1>
+              </a>
+          </div>
+          <div class="col-lg-9">
+              <div class="row bg-white border-bottom d-none d-lg-flex">
+                  <div class="col-lg-7 text-left">
+                      <div class="h-100 d-inline-flex align-items-center py-2 px-3">
+                          <i class="fa fa-envelope text-primary mr-2"></i>
+                          <small>info@example.com</small>
+                      </div>
+                      <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                          <i class="fa fa-phone-alt text-primary mr-2"></i>
+                          <small>+012 345 6789</small>
+                      </div>
+                  </div>
+                  <div class="col-lg-5 text-right">
+                      <div class="d-inline-flex align-items-center p-2">
+                          <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                              <i class="fab fa-facebook-f"></i>
+                          </a>
+                          <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                              <i class="fab fa-twitter"></i>
+                          </a>
+                          <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                              <i class="fab fa-linkedin-in"></i>
+                          </a>
+                          <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                              <i class="fab fa-instagram"></i>
+                          </a>
+                          <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                              <i class="fab fa-youtube"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+                  <a href="index" class="navbar-brand d-block d-lg-none">
+                      <h1 class="m-0 display-4 text-primary text-uppercase">Justice</h1>
+                  </a>
+                  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                      <div class="navbar-nav mr-auto py-0">
+                          <a href="home" class="nav-item nav-link ">Home</a>
+                          <!-- <a href="reg" class="nav-item nav-link">Registration</a>
+                          <a href="log" class="nav-item nav-link">Login</a> -->
+                          <a href="gallery1" class="nav-item nav-link">Gallery</a>
+                          <div class="nav-item dropdown">
+                              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reporting</a>
+                              <div class="dropdown-menu rounded-0 m-0">
+                                  <a href="crime" class="dropdown-item">Report Complaint</a>
+                                  <a href="missing" class="dropdown-item">Report missing</a>
+                                  <a href="report" class="dropdown-item">Report Crime</a>
+                              </div>
+                          </div>
+                          <a href="user_card" class="nav-item nav-link">My Complaints</a>
+                      </div>
+                      <a href="case" class="btn btn-primary mr-3 d-none d-lg-block">Cases</a>
+                  </div>
+              </nav>
+          </div>
+      </div>
+  </div>
+  <!-- Header End -->
+       <h1 align="center" style="color:red;">
+          Register Your Complaint Here</h1>
+          
+ 
+    <center>
+       <div class=" card registerform">
+        <form action="crime" method="post" onsubmit="return crime()">
+          {% csrf_token %}
+         
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" placeholder="Enter name"
+             name="q1" id="q1" required>
+          </div>
+           
+          <div class="form-group">
+            <label>Father/Mother name</label>
+            <input type="text" class="form-control"
+               placeholder="Enter name of father or mother" name="q2" id="q2" required>
+          </div>
+           
+          <div class="form-group">
+            <label>Age</label>
+            <input type="text"class="form-control" placeholder="Enter Age"
+               name="q3" id="q3" required>
+          </div>
+           
+          <div class="form-group">
+            <label>Address</label>
+            <textarea class="form-control" placeholder="Enter address"
+              name="q4" id="q4" required></textarea>
+          </div>
+           
+          <div class="form-group">
+            <label>Gender</label>
+            <select name="q5" id="q5">
+              <option value="SELECT">SELECT</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+           
+           <div class="form-group">
+            <label>Date and time of incidence</label>
+            <input type="datetime-local" class="form-control"
+                 placeholder="Enter date and time" name="q6" id="q6"required>
+          </div>
+           
+           <div class="form-group">
+            <label>Date and time of registration</label>
+            <input type="datetime-local" class="form-control"
+                    placeholder="Enter date and time" name="q7" id="q7" required>
+          </div>
+           
+           <div class="form-group">
+            <label>Complaint</label>
+               <textarea type="text" class="form-control"
+                    placeholder="Enter complaint"
+                     name="q8" id="q8" required></textarea>
+           </div>
+           
+           <div class="form-group">
+            <label>Section</label>
+            <input type="text" class="form-control"
+             placeholder="section"
+                  name="q9" id="q9" required>
+           </div>
+           
+          <div class="form-group">
+            <label>Select Complaint Type</label>
+            <select class="form-control" name="q10" id="q10">
+              <option>Attempt to Murder</option>
+              <option>Theft                </option>
+              <option>Domestic Violence    </option>
+              <option>Lost and Found    </option>
+              <option>Stolen Vehicle    </option>
+              <option>Missing Person    </option>
+              <option>Others            </option>
+            </select>
+          </div>
+        </div>
+          <button class="btn btn-lg btn-warning" type="submit" onclick="submitForm()"
+            id="b1" name="b1">
+                Submit
+          </button>
+        </form>      
+     </div>
+    </center>
+    <script>
+        function  crime()
+    {
+        var name=document.getElementById("q1").value;
+        var pname=document.getElementById("q2").value;
+        var age=document.getElementById("q3").value;
+        var add=document.getElementById("q4").value;
+        var comp=document.getElementById("q8").value;
+        var sec=document.getElementById("q9").value;
+        
+
+        const regnme =/^[A-Z a-z ]+$/;
+        const regage =/^[0-9]+$/;
+        const regcom =/^[0-9 A-Z a-z . , ]+$/;
+         
+
+        if(!regnme.test(name)){
+            alert("Only alphabets allowed!..........");
+            return false;
+        }
+        if(!regnme.test(pname)){
+            alert("Only alphabets allowed!..........");
+            return false;
+        }
+        if(!regage.test(age)){
+            alert("only numerical values allowed........");
+            return false;
+        }
+        if(!regcom.test(add)){
+            alert("Enter valid data.........");
+            return false;
+        }
+        if(!regcom.test(comp)){
+            alert("Enter valid data.........");
+            return false;
+        }
+        if(!regcom.test(sec)){
+            alert("Enter valid data.........");
+            return false;
+        }
+        
+       
+    } 
+    </script>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+        <div class="row mt-5">
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                    <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
+                    <div class="ml-3">
+                        <h5 class="text-white">Our Office</h5>
+                        <p class="m-0">123 Street, New York, USA</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                    <i class="fa fa-2x fa-envelope-open text-primary"></i>
+                    <div class="ml-3">
+                        <h5 class="text-white">Email Us</h5>
+                        <p class="m-0">info@example.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                    <i class="fa fa-2x fa-phone-alt text-primary"></i>
+                    <div class="ml-3">
+                        <h5 class="text-white">Call Us</h5>
+                        <p class="m-0">+012 345 6789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">Justice</h1>
+                </a>
+                <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Popular Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Attorney</a>
+                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>FAQs</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Help</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy</a>
+                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Site Map</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Newsletter</h4>
+                <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum.</p>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-0" style="padding: 25px;" placeholder="Your Email">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-4">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
+            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">HTML Codex</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+ </body>
+</html>
